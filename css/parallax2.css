@@ -244,79 +244,90 @@ ul#nav li:nth-child(3) a {
 	margin-bottom: 40px;
 }
 
-#top-products .nav-tabs {
+#top-products .span12 {
+	/*background: #CCC;*/
+}
+
+#books-bestsellers, #books-top10 {
+	position: relative;
+	margin: 0 0 25px 0;
+	height: 330px;
+	overflow: hidden;
+}
+
+#top-products .jcarousel {
+	margin: 0 0 -10px 0;
+	height: 330px;
+	overflow: hidden;
+	z-index: 10;
+}
+
+#top-products .jcarousel ul {
+	position: absolute;
 	margin: 0;
+	width: 20000em;
+	height: 260px;
+	list-style: none;
+	white-space: nowrap;
 }
 
-#top-products .nav-tabs li a {
-	line-height: 100px;
-	background: #ccc;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
-	border-color: #ccc;
-	color: #000;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-}
-
-#top-products .nav-tabs li.active a {
-	line-height: 100px;
-	height: 120px;
-	background: #ccc;
-	text-align: center;
-	font-size: 24px;
-	font-weight: bold;
-	border-color: #ccc;
-	color: #000;
-	-webkit-border-radius: 4px 4px 0 0;
-	-moz-border-radius: 4px 4px 0 0;
-	border-radius: 4px 4px 0 0;
-}
-
-#top-products .nav-tabs li:not(.active) a:hover {
-	background: #ddd;
-	border-color: #ddd;
-}
-
-#top-products .tab-content {
-	background: #ccc;
-}
-
-#top-products .tab-pane {
-	padding: 15px 15px 0 15px;
-}
-
-#top-products .tab-pane .row-fluid {
-	padding-bottom: 15px;
-}
-
-#top-products .tab-pane .row-fluid .item {
+#top-products .jcarousel ul .book {
 	display: inline-block;
-	margin: 0 19px 19px 0;
-	width: 23.076923076923077%;
-	height: 220px;
-	background: #fff;
+	margin: 0 49px 0 0;
+	width: 200px;
+	height: 260px;
 }
 
-#top-products .tab-pane .row-fluid .item:nth-child(4n+4) {
-	margin: 0 0 19px 0;
+#top-products .jcarousel ul .book a {
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 260px;
 }
 
-#top-products .tab-pane .row-fluid .item p {
-	padding: 0 15px 0 15px;
+#top-products .jcarousel ul .book a img {
+	position: absolute;
+	display: block;
+	left: 17px;
+	bottom: 0;
+	max-height: 250px;
+	-webkit-box-shadow: 0 0 6px 0 #CCC;
+	box-shadow: 0 0 6px 0 #CCC;
+}
+
+#top-products .carouselbar {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	min-width: 100%;
+	background: #CCC;
+	z-index: 300;
+	-webkit-box-shadow: 0 0 6px 0 #CCC;
+	box-shadow: 0 0 6px 0 #CCC;
+	color #333;
+	text-shadow: 1px 1px 0 #FFF;
 	text-align: center;
-	color: #000;
-	font-size: 16px;
 }
 
-#top-products .tab-pane .row-fluid .item p:nth-child(1) {
-	padding: 15px 0 0 0;
+#top-products .carouselbar .carouselbar-inner {
+	display: inline-block;
+	margin: 0 auto;
+	width: auto;
 }
 
-#top-products .tab-pane .row-fluid .item p:nth-child(4) {
-	font-size: 12px;
+#top-products a, #top-products h4 {
+	display: inline-block;
+	color #333 !important;
+	text-shadow: 1px 1px 0 #FFF;
+}
+
+#top-products .leftarrow {
+	margin-right: 20px;
+}
+
+#top-products .rightarrow {
+	margin-left: 20px;
 }
 
 /*----- Social Ticker -----*/
