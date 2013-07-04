@@ -1,54 +1,31 @@
 $(function () {
 	
 	// Carousel Autoplay
-	$('#home-carousel').carousel({
+	$('.home-carousel').carousel({
 	  interval: 8000
 	});
 	
-	var ddT = '';
-	
 	// Nav Dropdown
-	$('#nav a, #nav-dropdown, #nav-dropdown a, #nav-dropdown-left, #nav-dropdown-right').hover(
-		function () { clearTimeout(ddT); $('#nav-dropdown').stop().fadeIn(); }, 
-	  function () { ddT = setTimeout(function() { $('#nav-dropdown').stop().fadeOut(); }, 500); }
-	);
-
-	var bestsellers_carousel = $('#books-bestsellers .jcarousel').jcarousel({
-    // Core configuration goes here
-	});
-
-	$('#books-bestsellers .jcarousel-prev').jcarouselControl({
-      target: '-=1',
-      carousel: $('#books-bestsellers')
+	$('.nav a, .nav-dropdown:nth-child(1n+1)')
+  .hover(function() {
+      $(".nav-dropdown").stop().slideToggle("fast");
   });
 
-  $('#books-bestsellers .jcarousel-next').jcarouselControl({
-      target: '+=1',
-      carousel: $('#books-bestsellers')
-  });
-
-  $('#books-bestsellers .jcarousel').jcarouselAutoscroll({
-    'interval': 8000,
-    'autostart': true
+	// Carousel Autoplay
+	$('#social-bar-carousel').carousel({
+		interval: 15000
 	});
 
-	var top10_carousel = $('#books-top10 .jcarousel').jcarousel({
-    // Core configuration goes here
+	// Homepage Featured Products
+	$('.top-products .container .row-fluid .span12').isotope({ filter: '.best', layoutMode : 'masonry' });
+
+	$('.top-products-selection a').click( function(e) {
+		e.preventDefault();
+		$('.top-products-selection a').removeClass('active');
+		$(this).addClass('active');
+	  var selector = $(this).attr('data-filter');
+	  $('.top-products .container .row-fluid .span12').isotope({ filter: selector, layoutMode : 'masonry' });
+	  return false;
 	});
 
-	$('#books-top10 .jcarousel-prev').jcarouselControl({
-      target: '-=1',
-      carousel: $('#books-top10')
-  });
-
-  $('#books-top10 .jcarousel-next').jcarouselControl({
-      target: '+=1',
-      carousel: $('#books-top10')
-  });
-
-  $('#books-top10 .jcarousel').jcarouselAutoscroll({
-    'interval': 8000,
-    'autostart': true
-	});
-	
 });

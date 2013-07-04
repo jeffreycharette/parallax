@@ -6035,9 +6035,8 @@ a.badge:focus {
 }
 
 .carousel-control {
-  position: absolute;
-  top: 40%;
-  left: 15px;
+  position: relative;
+  display: inline-block;
   width: 40px;
   height: 40px;
   margin-top: -20px;
@@ -6056,8 +6055,8 @@ a.badge:focus {
 }
 
 .carousel-control.right {
-  right: 15px;
-  left: auto;
+  position: relative;
+  display: inline-block;
 }
 
 .carousel-control:hover,
@@ -6069,9 +6068,9 @@ a.badge:focus {
 }
 
 .carousel-indicators {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+  position: relative;
+  display: inline-block;
+  height: 40px;
   z-index: 5;
   margin: 0;
   list-style: none;
